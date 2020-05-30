@@ -1,18 +1,18 @@
-package log.dao;
+package auth.vo;
 
-public class UserLogTypeDAO {
+public class UserAuthVO {
 
 	private String code;
 	private String name;
-	private int order;
+	private int priority;
 	
-	public UserLogTypeDAO(String code, String name, int order) {
+	public UserAuthVO(String code, String name, int priority) {
 		super();
 		this.code = code;
 		this.name = name;
-		this.order = order;
+		this.priority = priority;
 	}
-
+	
 	public String getCode() {
 		return code;
 	}
@@ -25,10 +25,10 @@ public class UserLogTypeDAO {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getOrder() {
-		return order;
+	public int getPriority() {
+		return priority;
 	}
-	public void setOrder(int order) {
-		this.order = order;
+	public void setPriority(int priority) {
+		this.priority = priority;
 	}
 }
