@@ -43,10 +43,22 @@
 	</div>
 	<nav id="footer-nav">
 		<ul>
-			<li>메뉴얼</li>
-			<li>음성학습</li>
-			<li>음성합성</li>
-			<li>참고</li>
+			<li onclick="location.href='/JTTS/page/main/manual'" class="selected">
+				<span><i class="axi axi-description"></i></span>
+				<br>메뉴얼
+			</li>
+			<li onclick="location.href='/JTTS/page/main/study'">
+				<span><i class="axi axi-microphone2"></i></span>
+				<br>음성학습
+			</li>
+			<li onclick="location.href='/JTTS/page/main/synthesis'">
+				<span><i class="axi axi-volume-up"></i></span>
+				<br>음성합성
+			</li>
+			<li onclick="location.href='/JTTS/page/main/ref'">
+				<span><i class="axi axi-book3"></i></span>
+				<br>참고
+			</li>
 		</ul>
 		<div id="menu-indicator"><div></div></div>
 	</nav>

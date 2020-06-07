@@ -8,7 +8,7 @@ import framework.servlet.controller.vo.PageMapperVO;
 
 public class JoinPageRedirectAction implements RedirectPageHandler {
 	
-	private static final String VIEW_PAGE = "/WEB-INF/view/auth/Join.jsp";
+	private static final String VIEW_PAGE = "/WEB-INF/view/auth/join.jsp";
 
 	@Override
 	public String getURL() {

@@ -1,4 +1,4 @@
-package auth.command;
+package mainPage.command;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -6,13 +6,13 @@ import javax.servlet.http.HttpServletResponse;
 import framework.servlet.controller.handler.RedirectPageHandler;
 import framework.servlet.controller.vo.PageMapperVO;
 
-public class LoginPageRedirectAction implements RedirectPageHandler {
+public class MainPageRedirectAction implements RedirectPageHandler {
 	
-	private static final String VIEW_PAGE = "/WEB-INF/view/auth/login.jsp";
+	private static final String VIEW_PAGE = "/WEB-INF/view/main/manual.jsp";
 
 	@Override
 	public String getURL() {
-		return "/page/auth/login";
+		return "/page/main/manual";
 	}
 
 	@Override

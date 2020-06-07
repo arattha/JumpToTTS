@@ -12,7 +12,7 @@ public class UserVO {
 	private String phoneNumber;
 	private Date birth;
 	private int gender;
-	private UserAuthVO auth;
+	private String authCode;
 	private boolean isValid;
 	private boolean isResign;
 	private Date regdate;
@@ -27,7 +27,7 @@ public class UserVO {
 		this.phoneNumber = null;
 		this.birth = new Date(0);
 		this.gender = 1;
-		this.auth = null;
+		this.authCode = null;
 		this.isValid = true;
 		this.isResign = false;
 		this.regdate = new Date();
@@ -81,11 +81,11 @@ public class UserVO {
 	public void setGender(int gender) {
 		this.gender = gender;
 	}
-	public UserAuthVO getAuth() {
-		return auth;
+	public String getAuthCode() {
+		return authCode;
 	}
-	public void setAuth(UserAuthVO auth) {
-		this.auth = auth;
+	public void setAuthCode(String authCode) {
+		this.authCode = authCode;
 	}
 	public boolean isValid() {
 		return isValid;

@@ -22,17 +22,34 @@ public class JoinAction implements AjaxRequestHandler {
 	public JSONAware process(HttpServletRequest req, HttpServletResponse resp) throws Exception {
 		String id = req.getParameter("id");
 		String pw = req.getParameter("pw");
+		String pwCfm = req.getParameter("pwCfm");
 		String name = req.getParameter("name");
 		String nickname = req.getParameter("nickname");
-		
-		UserVO user = new UserVO(id, name, nickname);
+		String email = req.getParameter("email");
 		
 		JSONObject res = new JSONObject();
-		UserAuthService service = new UserAuthService();
-		if (service.joinNewUser(user, pw))
-			res.put("result", "join success");
-		else
-			res.put("result", "join failed");
+		if (id == null || id.isEmpty())
+			res.put("status", "empty field - id");
+		else if (pw == null || pw.isEmpty())
+			res.put("status", "empty field - pwd");
+		else if (!pw.equals(pwCfm))
+			res.put("status", "pwd mismatch");
+		else if (name == null || name.isEmpty())
+			res.put("status", "empty field - name");
+		else if (nickname == null || nickname.isEmpty())
+			res.put("status", "empty field - nickname");
+		else if (email == null || email.isEmpty())
+			res.put("status", "empty field - email");
+		else {
+			UserVO user = new UserVO(id, name, nickname);
+			user.setEmailAddr(email);
+			
+			UserAuthService service = new UserAuthService();
+			if (service.joinNewUser(user, pw))
+				res.put("status", "join success");
+			else
+				res.put("status", "join failed");
+		}
 		
 		return res;
 	}

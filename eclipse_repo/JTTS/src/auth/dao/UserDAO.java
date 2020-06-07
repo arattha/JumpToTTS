@@ -43,4 +43,33 @@ public class UserDAO {
 		
 		return true;
 	}
+	
+	public UserVO getUserInfo(String id) {
+		DBMng db = null;
+		
+		try {
+			db = new DBMng();
+			db.setQuery("select * from user_info where id=?");
+			db.setString(id);
+			db.execute();
+			
+			if (db.next()) {
+				UserVO user = new UserVO(id, db.getString("name"), db.getString("nickname"));
+				user.setHomeAddr(db.getString("home_address"));
+				user.setEmailAddr(db.getString("email_address"));
+				user.setPhoneNumber(db.getString("phone_number"));
+				user.setBirth(db.getDate("birth"));
+				user.setGender(db.getString("gender").equals("male")?1:2);
+				user.setAuthCode(db.getString("auth_code"));
+				return user;
+			}
+			else 
+				return null;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return null;
+		} finally {
+			db.close();
+		}
+	}
 }
