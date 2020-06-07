@@ -10,6 +10,7 @@ import framework.util.LogUtil;
 public class ServerConfig {
 	
 	private static String serviceContainerName;
+	private static String projectName;
 	private static String projectVersion;
 	private static String dateFormat;
 	private static String serverEncodingCharSet;
@@ -30,6 +31,17 @@ public class ServerConfig {
 	static void setServiceContainerName(String serviceContainerName) {
 		ServerConfig.serviceContainerName = serviceContainerName;
 		LogUtil.printLog("The service container name has been set to [" + serviceContainerName + "].");
+	}
+	/**
+	 * 서버 전역설정값
+	 * @return 프로젝트 이름
+	 */
+	public static String getProjectName() {
+		return projectName;
+	}
+	public static void setProjectName(String projectName) {
+		ServerConfig.projectName = projectName;
+		LogUtil.printLog("The project name has been set to [" + projectName + "].");
 	}
 	/**
 	 * 서버 전역설정값

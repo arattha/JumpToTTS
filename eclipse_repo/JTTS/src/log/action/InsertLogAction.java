@@ -12,7 +12,7 @@ public class InsertLogAction implements AjaxRequestHandler {
 	@Override
 	public String getURL() {
 		// TODO Auto-generated method stub
-		return null;
+		return "/process/log/insert";
 	}
 
 	@Override

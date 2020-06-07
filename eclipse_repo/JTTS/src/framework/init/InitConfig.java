@@ -45,6 +45,7 @@ public class InitConfig implements ServletContextListener {
 		else
 			ServerConfig.setServiceContainerName("/"+containerName);
 		
+		ServerConfig.setProjectName(defProp.getProperty("projectName"));
 		ServerConfig.setProjectVersion(defProp.getProperty("projectVersion"));
 		ServerConfig.setLogStackDirectory(initProp.getProperty("logStackDirectory"));
 		ServerConfig.setLogStackInterval(PropertiesReader.getIntProperty(defProp, "logStackInterval", 0));

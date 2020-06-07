@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+.container {
+	width: 340px;
+	height: 700px;
+	margin-top: 10px;
+	padding: 0;
+	border: 1px solid #000;
+	border-radius: 25px;
+}
+
+.topBar {
+	width: calc(100% + 1px);
+	height: 22px;
+	background-color: #515151;
+	border-radius: 25px 25px 0 0;
+	padding: 0 18px;
+	cursor: default;
+	color: #fff;
+}
+
+.mainContent {
+	height: calc(100% - 116px);
+	color: #000;
+	position: relative;
+	overflow-y: scroll;
+}
+
+.navBar {
+	width: calc(100% + 1px);
+	height: 35px;
+	background-color: #515151;
+	border-radius: 0 0 25px 25px;
+	color: #fff;
+	position: relative;
+}
+
+.navBar div {
+	display: inline-block;
+	padding: 5px 45px;
+	font-size: 2rem;
+	transition: color 0.2s ease 0s;
+}
+
+.navBar div:hover {
+	color: #ffee01;
+}
+
+#prevBtn {
+	cursor: pointer;
+}
+
+.upperMenubar {
+	background: #fcf6bf; 
+	width: 338px;
+	position: fixed;
+}
+.upperMenubar .menuIcon {
+	float: right; 
+	margin-right: 10px;
+}
+.upperMenubar .menuIcon i {
+	font-size: 4rem; 
+	cursor: pointer;
+}
+.upperMenubar .logoArea img {
+	width: 150px; 
+	vertical-align: unset; 
+	margin-left: 94px;
+}
+.upperMenuSpace {
+	height: 42px;
+}
+
+.menuContentArea {
+	position: fixed;
+	z-index: 500;
+	width: 238px;
+	height: 642px;
+	margin-left: 340px;
+	background: #fff;
+	transition: margin 0.3s ease-in-out 0.1s;
+	overflow-y: scroll;
+}
+.menuContentArea .menuNavBox div {
+	display: inline-block; 
+	width: 117px; 
+	height: 100px;
+	text-align: center;
+	cursor: pointer;
+}
+.menuContentArea .menuNavBox div i {
+	font-size: 4rem;
+}
+.menuContentArea .menuNavBox div span {
+	font-size: 1.3rem;
+}
+.menuContentHiddenArea {
+	position: fixed;
+	z-index: 501;
+	width: 238px;
+	height: 642px;
+	margin-left: 339px;
+	background: #fff;
+}
+
+#footer-nav {
+	height: 60px;
+	width: 100%;
+	position: relative;
+}
+#footer-nav>ul {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+#footer-nav>ul>li {
+	display: inline-block;
+	height: 100%;
+	width: 25%;
+	background: #edfcff;
+	position: relative;
+	float: left;
+	overflow: hidden;
+	border-right: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	color: #474747;
+	font-weight: bold;
+	text-align: center;
+}
+#footer-nav>ul>li.selected {
+	color: #009de4;
+}
+#footer-nav>ul>li>span {
+	font-size: 2.5rem;
+}
+
+#menu-indicator {
+	width: 25%;
+	position: absolute;
+	height: 10px;
+	top: 50px;
+	border-bottom: 2px solid #009de4;
+}
+#menu-indicator>div {
+	width: 7%;
+	height: 70%;
+	margin-left: 45%;
+	position: absolute;
+	bottom: -45%;
+	transform: rotate(45deg);
+	background: #009de4;
+}

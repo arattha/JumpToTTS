@@ -1,52 +1,31 @@
 package log.dao;
 
-import java.util.Date;
+import java.sql.SQLException;
+
+import framework.jdbc.DBMng;
+import log.vo.UserLogVO;
 
 public class UserLogDAO {
 
-	private String userID;
-	private String logTypeCode;
-	private String logContent;
-	private boolean isPublic;
-	private Date regdate;
-	
-	public UserLogDAO(String userID, String logTypeCode, String logContent, boolean isPublic, Date regdate) {
-		super();
-		this.userID = userID;
-		this.logTypeCode = logTypeCode;
-		this.logContent = logContent;
-		this.isPublic = isPublic;
-		this.regdate = regdate;
-	}
-
-	public String getUserID() {
-		return userID;
-	}
-	public void setUserID(String userID) {
-		this.userID = userID;
-	}
-	public String getLogTypeCode() {
-		return logTypeCode;
-	}
-	public void setLogTypeCode(String logTypeCode) {
-		this.logTypeCode = logTypeCode;
-	}
-	public String getLogContent() {
-		return logContent;
-	}
-	public void setLogContent(String logContent) {
-		this.logContent = logContent;
-	}
-	public boolean isPublic() {
-		return isPublic;
-	}
-	public void setPublic(boolean isPublic) {
-		this.isPublic = isPublic;
-	}
-	public Date getRegdate() {
-		return regdate;
-	}
-	public void setRegdate(Date regdate) {
-		this.regdate = regdate;
+	public boolean insertNewLog(UserLogVO log) {
+		DBMng db = null;
+		
+		try {
+			db = new DBMng();
+			db.setQuery("insert into user_log values (null, ?, ?, ?, ?, ?)");
+			db.setString(log.getUserID());
+			db.setString(log.getLogTypeCode());
+			db.setString(log.getLogContent());
+			db.setInt(log.isPublic()?1:0);
+			db.setDate(log.getRegdate());
+			db.execute();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return false;
+		} finally {
+			db.close();
+		}
+		
+		return true;
 	}
 }

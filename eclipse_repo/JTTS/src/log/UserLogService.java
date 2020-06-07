@@ -1,30 +1,18 @@
 package log;
 
-import java.sql.SQLException;
+import java.util.Date;
 
-import framework.jdbc.DBMng;
 import log.dao.UserLogDAO;
+import log.vo.UserLogVO;
 
 public class UserLogService {
 
-	public boolean insertLog(UserLogDAO dao) {
-		DBMng db = null;
-		
-		try {
-			db = new DBMng();
-			db.setQuery("insert into user_log values(null,?,?,?,?,?)");
-			db.setString(dao.getUserID());
-			db.setString(dao.getLogTypeCode());
-			db.setString(dao.getLogContent());
-			db.setInt(dao.isPublic()?1:0);
-			db.setDate(dao.getRegdate());
-			db.execute();
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
+	public boolean addNewLog(String userID, String logTypeCode, String logContent, boolean isPublic) {
+		UserLogVO log = new UserLogVO(userID, logTypeCode, logContent, isPublic, new Date());
+		UserLogDAO dao = new UserLogDAO();
+		if (dao.insertNewLog(log))
+			return true;
+		else
 			return false;
-		}
-		
-		return true;
 	}
 }
