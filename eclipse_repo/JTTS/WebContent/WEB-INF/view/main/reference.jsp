@@ -40,6 +40,9 @@
 			<img src="/JTTS/weblib/imgs/JTTS-logo-horizontal.png" style="width: 140px; vertical-align: unset; margin-left: 18px; margin-top: 5px;">
 		</div>
 		
+		<div style="margin-top: 25px; padding: 25px;">
+			
+		</div>
 	</div>
 	<nav id="footer-nav">
 		<ul>

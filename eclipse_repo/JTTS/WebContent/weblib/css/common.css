@@ -127,6 +127,7 @@
 	color: #474747;
 	font-weight: bold;
 	text-align: center;
+	cursor: pointer;
 }
 #footer-nav>ul>li.selected {
 	color: #009de4;

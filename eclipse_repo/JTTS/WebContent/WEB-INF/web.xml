@@ -11,10 +11,4 @@
 	  		fileDestination=/WEB-INF/defConfig.properties
   		</param-value>
   	</context-param>
-  	<context-param>
-		<param-name>initConfig</param-name>
-		<param-value>
-			fileDestination=/WEB-INF/initConfig-dev-yh.properties
-  		</param-value>
-  	</context-param>
 </web-app>

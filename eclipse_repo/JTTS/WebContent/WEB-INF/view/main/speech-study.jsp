@@ -21,7 +21,12 @@
 <script type="text/javascript" src="/JTTS/weblib/js/util.js"></script>
 <script type="text/javascript" src="/JTTS/weblib/js/common.js"></script>
 <style type="text/css">
-	
+	.script-list {
+		width: 100%;
+	}
+	.script-list tr {
+		height: 34px;
+	}
 </style>
 <script type="text/javascript">
 	$('document').ready(function() {
@@ -40,6 +45,83 @@
 			<img src="/JTTS/weblib/imgs/JTTS-logo-horizontal.png" style="width: 140px; vertical-align: unset; margin-left: 18px; margin-top: 5px;">
 		</div>
 		
+		<div style="margin-top: 25px; padding: 25px;">
+			<h3 style="text-align: center;">
+				<img src="/JTTS/weblib/imgs/JTTS-icon.png" style="width: 20px; padding-bottom: 6px;">
+				대본을 녹음해주세요.
+			</h3>
+			
+			<div style="height: 330px; overflow-y: scroll; padding-top: 10px;">
+				<table class="script-list">
+					<tr>
+						<td><i class="axi axi-check2" style="color: #38b301"></i></td>
+						<td>기차도 전기도 없었다.</td>
+						<td><i class="axi axi-play"></i></td>
+					</tr>
+					<tr>
+						<td><i class="axi axi-check2" style="color: #38b301"></i></td>
+						<td>이제 날씨가 너무 덥다.</td>
+						<td><i class="axi axi-play"></i></td>
+					</tr>
+					<tr>
+						<td><i class="axi axi-check2" style="color: #38b301"></i></td>
+						<td>안녕하세요.</td>
+						<td><i class="axi axi-play"></i></td>
+					</tr>
+					<tr>
+						<td><i class="axi axi-check2" style="color: #38b301"></i></td>
+						<td>감사해요.</td>
+						<td><i class="axi axi-play"></i></td>
+					</tr>
+					<tr>
+						<td><i class="axi axi-check2" style="color: #38b301"></i></td>
+						<td>잘있어요.</td>
+						<td><i class="axi axi-play"></i></td>
+					</tr>
+					<tr>
+						<td><i class="axi axi-check2" style="color: #38b301"></i></td>
+						<td>다시 만나요.</td>
+						<td><i class="axi axi-play"></i></td>
+					</tr>
+					<tr>
+						<td><i class="axi axi-trending-neutral"></i></td>
+						<td style="font-weight: bold;">화려한 조명이 나를 감싸네.</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>내일은 비가 올 예정이다.</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>오늘 저녁은 김치찌개이다.</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>어제 너무 늦게 잤다.</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>여기까지 스크롤을 내리다니.</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>시 공 조 아</td>
+						<td></td>
+					</tr>
+				</table>
+			</div>
+			
+			<div style="font-size: 5.5rem; text-align: center; margin-top: 15px;">
+				<i class="axi axi-record" style="cursor: pointer; color: #f00;"></i>
+				<i class="axi axi-pause" style="cursor: pointer;"></i>
+				<i class="axi axi-stop" style="cursor: pointer;"></i>
+			</div>
+		</div>
 	</div>
 	<nav id="footer-nav">
 		<ul>

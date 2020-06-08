@@ -1,7 +1,5 @@
 package framework.util;
 
-import framework.logs.LogStackService;
-
 /**
  * 로그 콘솔출력 및 텟스트파일로의 저장을 위한 클래스
  * @author 박유현
@@ -61,7 +59,6 @@ public class LogUtil {
 		String[] temp = trace[2].getClassName().split("\\.");
 		String className = "[" + temp[temp.length-1] + "]";
 		String res = "["+DateUtil.getSysdateStr()+"]" + className + ip + " - " + content;
-		LogStackService.addLog(res, isErr);
 		return res;
 	}
 }

@@ -12,11 +12,9 @@ public class ServerConfig {
 	private static String serviceContainerName;
 	private static String projectName;
 	private static String projectVersion;
-	private static String dateFormat;
+	private static String dateFormat = "yyyy.MM.dd(E) a hh:mm:ss";
 	private static String serverEncodingCharSet;
-	private static String logStackDirectory;
 	private static int logStackInterval;
-	private static boolean isDev;
 	private static String ipAddr;
 	private static int serverPortNum;
 	private static String macAddr;
@@ -61,10 +59,6 @@ public class ServerConfig {
 	public static String getDateFormat() {
 		return dateFormat;
 	}
-	static void setDateFormat(String dateFormat) {
-		ServerConfig.dateFormat = dateFormat;
-		LogUtil.printLog("The server date format has been set to [" + dateFormat + "].");
-	}
 	/**
 	 * 서버 전역설정값
 	 * @return 인코딩 캐릭터셋
@@ -78,18 +72,6 @@ public class ServerConfig {
 	}
 	/**
 	 * 서버 전역설정값
-	 * @return 로그파일이 저장될 디렉토리
-	 * @see framework.logs.LogStackService
-	 */
-	public static String getLogStackDirectory() {
-		return logStackDirectory;
-	}
-	static void setLogStackDirectory(String logStackDirectory) {
-		ServerConfig.logStackDirectory = logStackDirectory;
-		LogUtil.printLog("The server log stack directory has been set to [" + logStackDirectory + "].");
-	}
-	/**
-	 * 서버 전역설정값
 	 * @return 로그파일이 생성되는 주기 (분단위)
 	 * @see framework.logs.LogStackService
 	 */
@@ -99,24 +81,6 @@ public class ServerConfig {
 	static void setLogStackInterval(int logStackInterval) {
 		ServerConfig.logStackInterval = logStackInterval;
 		LogUtil.printLog("The server log stack interval has been set to [" + logStackInterval + "].");
-	}
-	/**
-	 * 서버 전역설정값
-	 * @return 개발자모드 - true / 일반사용자모드 - false
-	 */
-	public static boolean isDev() {
-		return isDev;
-	}
-	static void setIsDev(boolean isDev) {
-		ServerConfig.isDev = isDev;
-		if (isDev) {
-			System.out.println("***|  ***    *****  *    *       *     *   ****   ***    *****   |***");
-			System.out.println("***|  *   *  *      *    *       **   **  *    *  *   *  *       |***");
-			System.out.println("***|  *   *  *****  *    *       * * * *  *    *  *   *  *****   |***");
-			System.out.println("***|  *   *  *       *  *        * * * *  *    *  *   *  *       |***");
-			System.out.println("***|  ***    *****    **         *  *  *   ****   ***    *****   |***");
-			LogUtil.printLog("The server now runs in developer mode.");
-		}
 	}
 	/**
 	 * 서버 전역설정값

@@ -6,13 +6,13 @@ import javax.servlet.http.HttpServletResponse;
 import framework.servlet.controller.handler.RedirectPageHandler;
 import framework.servlet.controller.vo.PageMapperVO;
 
-public class SpeechSynthesisPageRedirectAction2 implements RedirectPageHandler {
+public class ReferencePageRedirectAction implements RedirectPageHandler {
 	
-	private static final String VIEW_PAGE = "/WEB-INF/view/main/speech-synthesis.jsp";
+	private static final String VIEW_PAGE = "/WEB-INF/view/main/reference.jsp";
 
 	@Override
 	public String getURL() {
-		return "/page/main/synthesis";
+		return "/page/main/ref";
 	}
 
 	@Override

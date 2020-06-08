@@ -21,7 +21,16 @@
 <script type="text/javascript" src="/JTTS/weblib/js/util.js"></script>
 <script type="text/javascript" src="/JTTS/weblib/js/common.js"></script>
 <style type="text/css">
-	
+	.script-list {
+		width: 100%;
+	}
+	.script-list tr {
+		height: 34px;
+	}
+	.script-list i {
+		color: #f00;
+		font-size: 2.5rem;
+	}
 </style>
 <script type="text/javascript">
 	$('document').ready(function() {
@@ -35,11 +44,59 @@
 		<i class="axi axi-android"></i> <i class="axi axi-smartphone"></i> <i class="axi axi-ion-aperture"></i>
 		<div style="float: right;"><i class="axi axi-bluetooth"></i> LTE <i class="axi axi-ion-connection-bars"></i> 70% <i class="axi axi-ion-android-battery"></i> 12:00</div>
 	</div>
-	<div class="mainContent" style="background: #fff;">
+	<div class="mainContent" style="background: #fff; overflow: hidden;">
 		<div class="upperMenubar" style="background: #edfcff; width: 338px;">
 			<img src="/JTTS/weblib/imgs/JTTS-logo-horizontal.png" style="width: 140px; vertical-align: unset; margin-left: 18px; margin-top: 5px;">
 		</div>
 		
+		<div style="margin-top: 25px; padding: 25px;">
+			<h3 style="text-align: center;">
+				<img src="/JTTS/weblib/imgs/JTTS-icon.png" style="width: 20px; padding-bottom: 6px;">
+				샘플용 음성
+			</h3>
+			
+			<div style="height: 252px; overflow-y: scroll; padding-top: 10px;">
+				<table class="script-list">
+					<tr>
+						<td><i class="axi axi-play-circle"></i></td>
+						<td>기차도 전기도 없었다.</td>
+					</tr>
+					<tr>
+						<td><i class="axi axi-play-circle"></i></td>
+						<td>이제 날씨가 너무 덥다.</td>
+					</tr>
+					<tr>
+						<td><i class="axi axi-play-circle"></i></td>
+						<td>안녕하세요.</td>
+					</tr>
+					<tr>
+						<td><i class="axi axi-play-circle"></i></td>
+						<td>감사해요.</td>
+					</tr>
+					<tr>
+						<td><i class="axi axi-play-circle"></i></td>
+						<td>잘있어요.</td>
+					</tr>
+					<tr>
+						<td><i class="axi axi-play-circle"></i></td>
+						<td>다시 만나요.</td>
+					</tr>
+					<tr>
+						<td><i class="axi axi-play-circle"></i></td>
+						<td>화려한 조명이 나를 감싸네.</td>
+					</tr>
+				</table>
+			</div>
+			
+			<h3 style="text-align: center;">
+				<img src="/JTTS/weblib/imgs/JTTS-icon.png" style="width: 20px; padding-bottom: 6px;">
+				직접 음성 만들기
+			</h3>
+			<textarea rows="3" cols="39" disabled="disabled" style="margin-top: 15px;">출력할 텍스트를 입력해주세요.	</textarea>
+			<div style="font-size: 5.5rem; text-align: center;">
+				<i class="axi axi-play" style="cursor: axi-play; color: #f00;"></i>
+			</div>
+		</div>
 	</div>
 	<nav id="footer-nav">
 		<ul>

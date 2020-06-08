@@ -33,12 +33,9 @@ public class InitConfig implements ServletContextListener {
 	 */
 	@Override
 	public void contextInitialized(ServletContextEvent sce) {
-		Properties tempInitProp = PropertiesReader.readPropString(sce.getServletContext().getInitParameter("initConfig"));
-		Properties initProp = PropertiesReader.readPropertiesFile(sce.getServletContext().getRealPath(tempInitProp.getProperty("fileDestination")));
 		Properties tempDefProp = PropertiesReader.readPropString(sce.getServletContext().getInitParameter("globalConfig"));
 		Properties defProp = PropertiesReader.readPropertiesFile(sce.getServletContext().getRealPath(tempDefProp.getProperty("fileDestination")));
 		
-		ServerConfig.setDateFormat(defProp.getProperty("dateFormat"));
 		String containerName = sce.getServletContext().getServletContextName();
 		if (containerName.equals("ROOT"))
 			ServerConfig.setServiceContainerName("");
@@ -47,9 +44,7 @@ public class InitConfig implements ServletContextListener {
 		
 		ServerConfig.setProjectName(defProp.getProperty("projectName"));
 		ServerConfig.setProjectVersion(defProp.getProperty("projectVersion"));
-		ServerConfig.setLogStackDirectory(initProp.getProperty("logStackDirectory"));
 		ServerConfig.setLogStackInterval(PropertiesReader.getIntProperty(defProp, "logStackInterval", 0));
-		ServerConfig.setIsDev(initProp.getProperty("devmode").equals("true"));
 		setNetworkAddress();
 		setPortNumber();
 	}
