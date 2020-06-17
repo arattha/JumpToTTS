@@ -32,6 +32,13 @@
 	$('document').ready(function() {
 		
 	});
+	
+	function addBold(dom) {
+		$('.script-sample').each(function() {
+			$(this).css('font-weight', 'inherit');
+		});
+		$(dom).css('font-weight', 'bold');
+	}
 </script>
 </head>
 <body>
@@ -55,62 +62,62 @@
 				<table class="script-list">
 					<tr>
 						<td><i class="axi axi-check2" style="color: #38b301"></i></td>
-						<td>기차도 전기도 없었다.</td>
+						<td class="script-sample" onclick="addBold(this);">기차도 전기도 없었다.</td>
 						<td><i class="axi axi-play"></i></td>
 					</tr>
 					<tr>
 						<td><i class="axi axi-check2" style="color: #38b301"></i></td>
-						<td>이제 날씨가 너무 덥다.</td>
+						<td class="script-sample" onclick="addBold(this);">이제 날씨가 너무 덥다.</td>
 						<td><i class="axi axi-play"></i></td>
 					</tr>
 					<tr>
 						<td><i class="axi axi-check2" style="color: #38b301"></i></td>
-						<td>안녕하세요.</td>
+						<td class="script-sample" onclick="addBold(this);">안녕하세요.</td>
 						<td><i class="axi axi-play"></i></td>
 					</tr>
 					<tr>
 						<td><i class="axi axi-check2" style="color: #38b301"></i></td>
-						<td>감사해요.</td>
+						<td class="script-sample" onclick="addBold(this);">감사해요.</td>
 						<td><i class="axi axi-play"></i></td>
 					</tr>
 					<tr>
 						<td><i class="axi axi-check2" style="color: #38b301"></i></td>
-						<td>잘있어요.</td>
+						<td class="script-sample" onclick="addBold(this);">잘있어요.</td>
 						<td><i class="axi axi-play"></i></td>
 					</tr>
 					<tr>
 						<td><i class="axi axi-check2" style="color: #38b301"></i></td>
-						<td>다시 만나요.</td>
+						<td class="script-sample" onclick="addBold(this);">다시 만나요.</td>
 						<td><i class="axi axi-play"></i></td>
 					</tr>
 					<tr>
 						<td><i class="axi axi-trending-neutral"></i></td>
-						<td style="font-weight: bold;">화려한 조명이 나를 감싸네.</td>
+						<td class="script-sample" onclick="addBold(this);" style="font-weight: bold;">화려한 조명이 나를 감싸네.</td>
 						<td></td>
 					</tr>
 					<tr>
 						<td></td>
-						<td>내일은 비가 올 예정이다.</td>
+						<td class="script-sample" onclick="addBold(this);">내일은 비가 올 예정이다.</td>
 						<td></td>
 					</tr>
 					<tr>
 						<td></td>
-						<td>오늘 저녁은 김치찌개이다.</td>
+						<td class="script-sample" onclick="addBold(this);">오늘 저녁은 김치찌개이다.</td>
 						<td></td>
 					</tr>
 					<tr>
 						<td></td>
-						<td>어제 너무 늦게 잤다.</td>
+						<td class="script-sample" onclick="addBold(this);">어제 너무 늦게 잤다.</td>
 						<td></td>
 					</tr>
 					<tr>
 						<td></td>
-						<td>여기까지 스크롤을 내리다니.</td>
+						<td class="script-sample" onclick="addBold(this);">여기까지 스크롤을 내리다니.</td>
 						<td></td>
 					</tr>
 					<tr>
 						<td></td>
-						<td>시 공 조 아</td>
+						<td class="script-sample" onclick="addBold(this);">시 공 조 아</td>
 						<td></td>
 					</tr>
 				</table>

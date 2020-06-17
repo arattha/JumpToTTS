@@ -36,6 +36,18 @@
 	$('document').ready(function() {
 		
 	});
+	
+	var speech = {
+			toggleArr: [false, false, false, false, false, false, false],
+			femaleAudioSourceIDArr: [1, 2, 3, 4, 5, 6, 7],
+			maleAudioSourceIDArr: [8, 9, 10, 11, 12, 13, 14],
+			play: function(index) {
+				this.toggleArr[index-1] = !this.toggleArr[index-1];
+				if (this.toggleArr[index-1])
+					index += 7;
+				new Audio('/JTTS/download/speech?file-id='+index).play();
+			}
+	}
 </script>
 </head>
 <body>
@@ -58,32 +70,32 @@
 			<div style="height: 252px; overflow-y: scroll; padding-top: 10px;">
 				<table class="script-list">
 					<tr>
-						<td><i class="axi axi-play-circle"></i></td>
+						<td><i class="axi axi-play-circle" onclick="speech.play(1);"></i></td>
 						<td>기차도 전기도 없었다.</td>
 					</tr>
 					<tr>
-						<td><i class="axi axi-play-circle"></i></td>
-						<td>이제 날씨가 너무 덥다.</td>
+						<td><i class="axi axi-play-circle" onclick="speech.play(2);"></i></td>
+						<td>네가 할 일이 무엇인가를 찾아라.</td>
 					</tr>
 					<tr>
-						<td><i class="axi axi-play-circle"></i></td>
+						<td><i class="axi axi-play-circle" onclick="speech.play(3);"></i></td>
+						<td>불친절하고 무뚝뚝한 노인이다.</td>
+					</tr>
+					<tr>
+						<td><i class="axi axi-play-circle" onclick="speech.play(4);"></i></td>
+						<td>성터 돌무더기 밑에 너무리굴이 있었다.</td>
+					</tr>
+					<tr>
+						<td><i class="axi axi-play-circle" onclick="speech.play(5);"></i></td>
 						<td>안녕하세요.</td>
 					</tr>
 					<tr>
-						<td><i class="axi axi-play-circle"></i></td>
-						<td>감사해요.</td>
+						<td><i class="axi axi-play-circle" onclick="speech.play(6);"></i></td>
+						<td>잘 생각했네.</td>
 					</tr>
 					<tr>
-						<td><i class="axi axi-play-circle"></i></td>
-						<td>잘있어요.</td>
-					</tr>
-					<tr>
-						<td><i class="axi axi-play-circle"></i></td>
-						<td>다시 만나요.</td>
-					</tr>
-					<tr>
-						<td><i class="axi axi-play-circle"></i></td>
-						<td>화려한 조명이 나를 감싸네.</td>
+						<td><i class="axi axi-play-circle" onclick="speech.play(7);"></i></td>
+						<td>천만의 말씀.</td>
 					</tr>
 				</table>
 			</div>

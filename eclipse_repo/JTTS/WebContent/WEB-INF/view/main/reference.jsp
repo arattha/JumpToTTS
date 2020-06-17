@@ -40,8 +40,30 @@
 			<img src="/JTTS/weblib/imgs/JTTS-logo-horizontal.png" style="width: 140px; vertical-align: unset; margin-left: 18px; margin-top: 5px;">
 		</div>
 		
-		<div style="margin-top: 25px; padding: 25px;">
-			
+		<div style="margin-top: 25px; padding: 25px; text-align: center;">
+			<div>
+				<h3 style="margin-bottom: 20px;">Developer</h3>
+				웹서버 개발 및 DB 설계 - 32141868 박유현
+				<br>
+				GCP 총괄 관리 - 32143180 이명재
+				<br>
+				음성학습 모델 구축 - 32144697 최광진
+			</div>
+			<div>
+				<h3>Reference</h3>
+				<img src="/JTTS/weblib/imgs/DeepVoiceBanner.png" style="width: 100%; vertical-align: unset;">
+				<br>
+				<span>DeepVoice3_Pytorch</span>
+				<br>
+				<span><a href="https://github.com/r9y9/deepvioce3_pytorch">https://github.com/r9y9/deepvioce3_pytorch</a></span>
+				<br><br>
+				<img src="/JTTS/weblib/imgs/JTTS-logo-horizontal.png" style="width: 78%; vertical-align: unset;">
+				<br>
+				<span>Jump to TTS</span>
+				<br>
+				<span><a href="https://github.com/kevin0309/JumpToTTS">https://github.com/kevin0309/JumpToTTS</a></span>
+			</div>
+			<button class="btn btn-success btn-xl" onclick="location.href='/JTTS/'" style="width: 130px; margin-top: 10px;">홈으로</button>
 		</div>
 	</div>
 	<nav id="footer-nav">
